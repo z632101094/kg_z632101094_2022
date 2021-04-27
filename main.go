@@ -2,10 +2,11 @@ package main
 
 import (
 	"fmt"
+	"os"
 )
 
 func main() {
-	nums := []string{"3, 25, 209"}
+	nums := os.Args[1:] //get the input
 	result := ""
 	for i := 0; i < len(nums); i++ { //iterate the input array
 		result = result + "," + translate(nums[i])
